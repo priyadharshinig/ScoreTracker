@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.priyadharshini.scoretracker.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/main_scores">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team A"
+            android:textSize="@dimen/team_name"
+            android:textColor="@color/colorDarkGreen"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/team_a_score"
+            android:text="0"
+            android:textSize="@dimen/team_score"/>
+
+        <Button
+            android:id="@+id/a_2_points"
+            android:text="+2 Points"
+            style="@style/ButtonStyle"/>
+
+        <Button
+            android:id="@+id/a_3_points"
+            android:text="+3 Points"
+            style="@style/ButtonStyle"/>
+
+        <Button
+            android:id="@+id/a_free_points"
+            android:text="Free Throw"
+            style="@style/ButtonStyle"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team B"
+            android:textSize="@dimen/team_name"
+            android:onClick="increment"
+            android:textColor="@color/colorDarkGreen"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/team_b_score"
+            android:textSize="@dimen/team_score"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/b_2_points"
+            android:text="+2 Points"
+            style="@style/ButtonStyle"/>
+
+        <Button
+            android:id="@+id/b_3_points"
+            android:text="+3 Points"
+            style="@style/ButtonStyle"/>
+
+        <Button
+            android:id="@+id/b_free_points"
+            android:text="Free Throw"
+            style="@style/ButtonStyle"/>
+
+    </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_alignParentBottom="true"
+        android:padding="18dp"
+        android:layout_centerInParent="true"
+        android:onClick="reset"
+        android:id="@+id/reset"
+        android:background="@color/colorGreen"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/team_name"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/reset"
+        android:id="@+id/winner"
+        android:textColor="@color/colorDarkGreen"
+        android:text="-----------"/>
+
+
+</RelativeLayout>
